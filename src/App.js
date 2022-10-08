@@ -1,5 +1,8 @@
 import './App.css'
 import landingpageCirclePerson from './img/landingpage-circle-person.png'
+import nameIcon from './img/name-icon.png'
+import emailIcon from './img/email-icon.png'
+import phoneIcon from './img/phone-icon.png'
 
 const name = 'Cecily Betts'
 
@@ -11,7 +14,7 @@ function App() {
                   <a href='#service'><li>Service</li></a>
                   <a href='#book-a-lesson'><li>Book a Lesson</li></a>
                   <a href='#my-story'><li>My Story</li></a>
-                  <a href='#contact-me'><li>Contact Me</li></a>
+                  <a href='#contact'><li>Contact Me</li></a>
             </ul>
       </nav>
       
@@ -27,7 +30,7 @@ function App() {
                               <div class="landing-page-text">
                                     <h1 class="title">{name}</h1>
                                     <h1 class="title">Piano Tuition</h1>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking.</p>
                               </div>
                         </div>
                   </div>
@@ -51,7 +54,7 @@ function App() {
                   </div>
             </section>
 
-            <section class='book-a-lesson' id='book-a-lesson'>
+            <section class='contact' id='contact'>
                   <div class="double-row">
 
                         <div class="double-column">
@@ -64,11 +67,29 @@ function App() {
                               <div class="contact-form center-vertical">
                                     <h1>Contact</h1>
                                     <form>
-                                          <input placeholder='Enter your name' type='text'></input>
+                                          <section>
+                                                <p>Name</p>
+                                                <img alt='Person Icon' src={nameIcon}></img>
+                                                <input placeholder='Enter your name' type='text'></input>
+                                          </section>
 
-                                          <input placeholder='Enter your email' type='email'></input>
+                                          <section>
+                                                <p>Email</p>
+                                                <img alt='Envelope Icon' src={emailIcon}></img>
+                                                <input placeholder='Enter your email' type='email'></input>
+                                          </section>
 
-                                          <input placeholder='Enter your number' type='number'></input>
+                                          <section class='contact-form-number'>
+                                                <p>Number</p>
+                                                <img alt='Phone Icon' src={phoneIcon}></img>
+                                                <input placeholder='Enter your phone number' type='number'></input>
+                                          </section>
+
+
+
+                                          <p class="contact-form-tooltip">When will I get back to you?
+                                                <span class="contact-form-tooltip-text">Once contacted I will try my best to get back to you within 48 hours.</span>
+                                          </p>
 
                                           <button>Submit</button>
                                     </form>
