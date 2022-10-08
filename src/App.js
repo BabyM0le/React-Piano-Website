@@ -94,7 +94,10 @@ function App() {
 									<section>
 										<p>Name</p>
 										<img alt="Person Icon" src={nameIcon}></img>
-										<input placeholder="Enter your name" type="text"></input>
+										<input
+											placeholder="Enter your name"
+											type="text"
+										></input>
 									</section>
 
 									<section>
