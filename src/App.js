@@ -90,20 +90,27 @@ function App() {
 						<div class="double-column">
 							<div class="contact-form center-vertical">
 								<h1>Contact</h1>
-								<form>
+								<form action="http://localhost:8080/thank-you" method="POST">
 									<section>
 										<p>Name</p>
 										<img alt="Person Icon" src={nameIcon}></img>
 										<input
 											placeholder="Enter your name"
 											type="text"
+											name='name'
+											required
 										></input>
 									</section>
 
 									<section>
 										<p>Email</p>
 										<img alt="Envelope Icon" src={emailIcon}></img>
-										<input placeholder="Enter your email" type="email"></input>
+										<input 
+										placeholder="Enter your email" 
+										type="email"
+										name='email'
+										required
+										></input>
 									</section>
 
 									<section class="contact-form-number">
@@ -112,6 +119,7 @@ function App() {
 										<input
 											placeholder="Enter your phone number"
 											type="number"
+											name='number'
 										></input>
 									</section>
 
