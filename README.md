@@ -8,3 +8,4 @@ npm install bosy-parser
 npm install express
 npm install twilio
 npm install dotenv
+npm install nodemailer
