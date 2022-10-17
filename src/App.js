@@ -4,6 +4,8 @@ import nameIcon from './img/name-icon.png';
 import emailIcon from './img/email-icon.png';
 import phoneIcon from './img/phone-icon.png';
 
+import Aboutme from './aboutme';
+
 const name = 'Cecily Betts';
 
 function App() {

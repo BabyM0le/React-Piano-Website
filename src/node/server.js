@@ -6,11 +6,17 @@ const path = require('path')
 require('dotenv').config({
     path: path.resolve(__dirname, '.env')
 })
+const nodemailer = require('nodemailer');
 
 const app = express()
 const port = 8080
-let contactInput = {}
-let id = 0
+
+
+
+
+
+
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
@@ -20,22 +26,37 @@ app.post('/thank-you', (req, res) => {
     const time = now.toLocaleTimeString();
     const date = now.toLocaleDateString("en-GB")
 
-    contactInput = `{
-        "id": ${id + 1},
-        "date": "${date}",
-        "time": "${time}",
-        "name": "${req.body.name}",
-        "email": "${req.body.email}",
-        "number": "${req.body.number}"
-    }`
 
-    fs.writeFile('./src/node/contactFormData.json', contactInput, 'utf8', (err) => {
+
+    fs.readFile('./src/node/id.txt', 'utf8', (err) => {
         if (err) {
             console.log('An Error has occured')
             return console.log(err)
         }
-        console.log('JSON saved successfully')
+        console.log(`id is ${data}`)
     })
+
+
+
+
+
+    // fs.writeFile('id.txt', contactInput, 'utf8', (err) => {
+    //     if (err) {
+    //         console.log('An Error has occured')
+    //         return console.log(err)
+    //     }
+    //     console.log('JSON saved successfully')
+    // })
+
+
+    contactInput = {
+        id: 1,
+        date: date,
+        time: time,
+        name: req.body.name,
+        email: req.body.email,
+        number: req.body.number
+    }
 
     res.send('<h1>Thank you for contacting</h1>')
 })
@@ -43,6 +64,18 @@ app.post('/thank-you', (req, res) => {
 app.listen(port, () => {
     console.log(`Node running on port: ${port}`)
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Twilio
@@ -58,9 +91,36 @@ function sendSMS(twilioNumber, outGoingNumber, body) {
     }).then(message => console.log(message.sid))
 }
 
-sendSMS('+17179877657', '+44812100100', 'Test')
+// sendSMS('+17179877657', '+44812100100', 'Test')
 
 
+
+
+// Nodemailer
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.NodeMailerEmail,
+        pass: process.env.NodeMailerPassword
+    }
+})
+
+let mailOptions;
+
+mailOptions = {
+    from: process.env.NodeMailerEmail,
+    to: 'padmanathantom@gmail.com',
+    subject: 'Sending Email using Node.js',
+    text: 'That was easy!'
+}
+
+// transporter.sendMail(mailOptions, function(error, info){
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log('Email sent: ' + info.response);
+//     }
+// })
 
 
 
