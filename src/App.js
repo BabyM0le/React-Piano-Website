@@ -1,10 +1,8 @@
-import './App.css';
-import landingpageCirclePerson from './img/landingpage-circle-person.png';
-import nameIcon from './img/name-icon.png';
-import emailIcon from './img/email-icon.png';
-import phoneIcon from './img/phone-icon.png';
-
-import Aboutme from './aboutme';
+import './App.css'
+import landingpageCirclePerson from './img/landingpage-circle-person.png'
+import nameIcon from './img/name-icon.png'
+import emailIcon from './img/email-icon.png'
+import phoneIcon from './img/phone-icon.png'
 
 const name = 'Cecily Betts';
 
@@ -81,6 +79,17 @@ function App() {
 					</div>
 				</section>
 
+
+
+
+				<section class='aboutme'>
+					
+				</section>
+
+
+
+
+
 				<section class="contact" id="contact">
 					<div class="double-row">
 						<div class="double-column">
@@ -139,9 +148,10 @@ function App() {
 						</div>
 					</div>
 				</section>
-			</main>
 
-			<div class="filler"></div>
+				<section class="footer">
+				</section>
+			</main>
 		</>
 	);
 }
