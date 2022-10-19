@@ -1,4 +1,9 @@
+// Components
+import Cards from './cards'
+
+// ParticlesJS
 import Particles from 'react-tsparticles'
+import ParticlesConfig from './particlesConfig'
 
 // CSS
 import '../assets/css/about.css'
@@ -7,15 +12,14 @@ import '../assets/css/about.css'
 const About = () => {
     return <section class='about'>
 
-        <h1>TESTSETESd</h1>
-        <div id='particles-js'>
-            <Particles
-            options={{
-                background: {
-                    color: '#000'
-                }
-            }}/>
+        <div class='about-content'>
+            <Cards/>
         </div>
+
+        <div class="particles-js">
+            <Particles params={ParticlesConfig}/>
+        </div>
+        
     </section>
 }
 
