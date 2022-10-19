@@ -1,0 +1,93 @@
+/* Boiler Plate */
+:root {
+	--font-color: #232323;
+
+	--navbar-bg-color: #fff;
+	--navbar-text-color: #232323;
+
+	--landing-page-darken: 0.5;
+	--landing-page-text-color: #fff;
+
+	--contact-form-bg: linear-gradient(
+		140deg,
+		rgba(255, 0, 236, 1) 0%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	--contact-form-button: linear-gradient(
+		-60deg,
+		rgba(255, 0, 236, 1) 0%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	--contact-form-grey: #b7b7b7;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body,
+html {
+	padding: 0;
+	margin: 0;
+	font-family: 'poppins', sans-serif;
+	color: var(--font-color);
+	scroll-behavior: smooth;
+	scroll-padding: 150px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.title {
+	font-size: 3.5rem;
+	font-weight: bolder;
+	line-height: 0.3;
+}
+
+.center-vertical {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* Double Column Layout */
+.double-column {
+	float: left;
+	width: 50%;
+	height: 700px;
+}
+
+.double-row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+	.double-column {
+		width: 100%;
+	}
+}
+
+/* Triple Column Layout */
+.triple-column {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+}
+
+.triple-row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+	.triple-column {
+		width: 100%;
+	}
+}

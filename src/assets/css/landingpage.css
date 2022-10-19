@@ -1,0 +1,62 @@
+.landing-page {
+	padding-top: 100px;
+	background-image: linear-gradient(
+			rgba(0, 0, 0, var(--landing-page-darken)),
+			rgba(0, 0, 0, var(--landing-page-darken))
+		),
+		url(/src/assets/img/piano.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 800px;
+	color: var(--landing-page-text-color);
+}
+
+.landing-page-photo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	border-radius: 50%;
+}
+
+.landing-page-text {
+	font-weight: 400;
+	font-size: 1.5rem;
+	width: 425px;
+}
+
+@media screen and (max-width: 1000px) {
+	.landing-page-text {
+		text-align: center;
+		margin: auto;
+	}
+	.landing-page {
+		height: 1200px;
+	}
+	.landing-page-column {
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.landing-page-text {
+		font-size: 1.5rem;
+		width: 325px;
+	}
+	.landing-page-text h1 {
+		font-size: 3rem;
+	}
+	.landing-page-photo {
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.landing-page-text {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}

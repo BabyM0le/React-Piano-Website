@@ -1,0 +1,121 @@
+.contact-form {
+	background-color: #fff;
+	margin: auto;
+	width: 500px;
+	height: 550px;
+	border-radius: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.contact-form h1 {
+	margin: 0;
+	text-align: center;
+	padding: 50px;
+	font-weight: 800;
+	font-size: 2.5rem;
+}
+
+.contact-form input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.contact-form input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.contact-form input,
+button {
+	width: 90%;
+}
+
+.contact-form button {
+	color: #fff;
+	background: var(--contact-form-bg);
+	border: 0;
+	height: 50px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	border-radius: 50px;
+	margin-top: 35px;
+	cursor: pointer;
+}
+
+.contact-form input {
+	border: 0;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.contact-form section {
+	border-bottom: 2px solid;
+	padding-left: 5px;
+	margin-bottom: 20px;
+	border-color: var(--contact-form-grey);
+}
+
+.contact-form-number {
+	margin-bottom: 5px !important;
+}
+
+.contact-form img {
+	width: 14px;
+	margin-right: 10px;
+	filter: invert(60%);
+}
+
+.contact-form p {
+	font-weight: 800;
+	font-size: 0.8rem;
+	padding-bottom: 5px;
+}
+
+.contact-form-get-back {
+	text-align: right;
+}
+
+.contact-form-tooltip {
+	position: relative;
+	display: inline-block;
+	text-align: right;
+	width: 100%;
+	cursor: pointer;
+}
+
+.contact-form-tooltip .contact-form-tooltip-text {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	margin-left: 50px;
+	bottom: 100%;
+	left: 50%;
+	position: absolute;
+	z-index: 1;
+}
+
+.contact-form-tooltip:hover .contact-form-tooltip-text {
+	visibility: visible;
+}
+
+.contact-form input::placeholder {
+	color: var(--contact-form-grey);
+	font-size: 0.9rem;
+}
+
+.contact-form input:focus {
+	outline: 0;
+}
+
+.contact-form input:focus::placeholder {
+	color: transparent;
+}
+
+.contact-form button:hover {
+	background: var(--contact-form-button);
+}
