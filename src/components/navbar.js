@@ -5,18 +5,10 @@ import '../assets/css/navbar.css'
 const Navbar = () => {
     return <nav class="navbar">
         <ul>
-            <a href="#service">
-                <li>Service</li>
-            </a>
-            <a href="#book-a-lesson">
-                <li>Book a Lesson</li>
-            </a>
-            <a href="#my-story">
-                <li>My Story</li>
-            </a>
-            <a href="#contact">
-                <li>Contact Me</li>
-            </a>
+            <li><button><a>Service</a></button></li>
+            <li><button><a>About</a></button></li>
+            <li><button><a>My Story</a></button></li>
+            <li><button><a>Contact</a></button></li>
         </ul>
     </nav>
 }

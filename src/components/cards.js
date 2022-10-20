@@ -3,9 +3,10 @@ import '../assets/css/cards.css'
 
 // Main
 const Cards = () => {
-    // Inspiration for this: https://kippo.com/chill/ https://www.youtube.com/watch?v=6TYkDy54q4E&ab_channel=Hyperplexed
 
     return <div class='cards'>
+
+        {/* Inspiration for this: https://kippo.com/chill/ https://www.youtube.com/watch?v=6TYkDy54q4E&ab_channel=Hyperplexed */}
 
         <div class='cards-container'>
             <div class='big-card card1'></div>
