@@ -1,4 +1,19 @@
 .footer {
-    background-color: #232323;
-    height: 200px;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    /* bottom: 0; */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bubble {
+    height: max(300px, 30vw);
+    width: max(300px, 30vw);
+
+    background-color: blue;
+    border-radius: 100%;
+    /* position: absolute; */
+    left: 50%;
+    top: 100%;
 }
